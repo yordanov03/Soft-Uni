@@ -1,0 +1,22 @@
+﻿@*<h1>Index</h1>
+    @Model.Id
+    @Model.Name
+
+    <div>@ViewData["Name"]</div>
+
+    <div>
+        @foreach (var item in (List<int>) ViewData["Id"])
+        {
+            @item
+        }
+    </div>*@
+@model  CatDetailsModel
+<h1>Form</h1>
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <input asp-for="Id" /><span asp-validation-for="Id"></span>
+    <br />
+    <input asp-for="Name" /> <span asp-validation-for="Name"></span>
+    <br />
+    <input type="submit" value="Save cat" />
+</form>

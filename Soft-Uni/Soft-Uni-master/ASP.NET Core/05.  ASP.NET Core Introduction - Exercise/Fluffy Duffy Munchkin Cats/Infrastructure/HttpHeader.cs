@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Fluffy_Duffy_Munchkin_Cats.Infrastructure
+{
+    public class HttpHeader
+    {
+        public const string Location = "Location";
+    }
+}
