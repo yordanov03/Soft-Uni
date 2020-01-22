@@ -1,0 +1,29 @@
+﻿@model  SomeModel
+@{
+    ViewData["Title"] = "TagHelpers";
+}
+
+<h2>TagHelpers</h2>
+
+<form>
+    <div asp-validation-summary="ModelOnly"></div>
+    <input asp-for="SomeBool"/>
+    <span asp-validation-for="Text"></span> // za konkretno property
+</form>
+<a asp-controller="Home" asp-action="Index">Home</a>
+
+@Html.ActionLink("Ivo", "Index", "Home") -> // Ivo - action - controller
+
+@using(Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(m=>m.Text)
+        @Html.ValidationMessageFor(m=>m.text)
+    </div>
+}
+
+<form method="post" action="/">
+    @Html.EditorForModel(m=>m.SomeBool)
+</form>   generira formi za vsqko property ot entityto
+
+@(await Component.InvokeAsync<MenuComponent>())
