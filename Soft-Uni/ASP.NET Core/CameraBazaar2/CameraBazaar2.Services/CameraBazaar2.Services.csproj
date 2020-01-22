@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CameraBazaar2.Data\CameraBazaar2.Data.csproj" />
+    <ProjectReference Include="..\CameraBazaar2.Models\CameraBazaar2.Models.csproj" />
+  </ItemGroup>
+
+</Project>
